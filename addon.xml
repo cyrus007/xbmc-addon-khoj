@@ -2,7 +2,7 @@
 <addon id="plugin.video.khoj"
        name="Numi Khoj"
        version="0.1.0"
-       provider-name="sam_dal">
+       provider-name="cyrus007">
   <requires>
     <import addon="xbmc.python" version="1.0"/>
     <import addon="script.module.simplejson" version="2.0.10"/>

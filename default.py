@@ -1,12 +1,12 @@
 """
     Numi - Khoj
-    sam_dal
+    cyrus007
 """
 import sys
 
 #plugin constants
 __plugin__ = "NUMI Khoj"
-__author__ = "sam_dal <swapan@yahoo.com>"
+__author__ = "cyrus007 <swapan@yahoo.com>"
 __url__ = ""
 __version__ = "0.1.0"
 
