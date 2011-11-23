@@ -1,2 +1,9 @@
 XBMC Plugin name - Numi Khoj
 This plugin searches bollywood movies containing the term in the movie title.
+It is dependent on a server which responds to two requests both of which return json results:
+1) /search?str=<string to search for>
+2) /getvids?url=<url returned by the search command>
+The first result is an array of all matching movie titles
+[{"title":<movie title>,"img":<movie poster>,"url":<url of the page from Rangu>}, ...]
+The second result is an object consiting of links scraped from the URL
+{"servers":[{"no":1,"links":[<url of media file>]}],"title":<same title>,"img":<url of the movie cover>}
