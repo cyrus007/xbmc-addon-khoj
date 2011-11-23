@@ -116,8 +116,6 @@ class Khoj:
                         progDialog.close()
                         return 3, {'Title':'Error', 'Plot':'', 'url':[]}
                 else:
-#                   progString = '[B]Video number %s has errors.' % (done)
-#                   progDialog.update(percent, error, progString)
                     progDialog.close()
                     xbmcgui.Dialog().ok('Video number %s has errors.' % (done), "Try other sources.")
                     return 3, {'Title':'Error', 'Plot':'', 'url':[]}

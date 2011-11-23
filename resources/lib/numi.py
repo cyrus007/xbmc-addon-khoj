@@ -161,31 +161,6 @@ class UI:
                 popup.ok('Invalid video playlist', "Video was removed due to copyright issue.", "Try other sources.")
 #           xbmcplugin.setResolvedUrl(int(sys.argv[1]), True, li)
 
-    def test(self):
-#       videos = dict()
-        videos = [u'http://www.dailymotion.com/cdn/H264-848x480/video/xi71ai.mp4?auth=1322073997-32a90212b157571400cef9bc581e912c',\
-                  u'http://www.dailymotion.com/cdn/H264-848x480/video/xi71b7.mp4?auth=1322073998-ecb9f3f233d5128b5f3e5e345ff00cef',\
-                  u'http://www.dailymotion.com/cdn/H264-848x480/video/xi71cd.mp4?auth=1322074000-5da73e919ae117f9abc9ef800f0e02de',\
-                  u'http://www.dailymotion.com/cdn/H264-848x480/video/xi71ro.mp4?auth=1322074001-533fbc3e2f24e8fbafada0c7cc5edf33',\
-                  u'http://www.dailymotion.com/cdn/H264-848x480/video/xi71tq.mp4?auth=1322074002-e7e756e1c8678becfba6708909e32d59']
-        playlist = xbmc.PlayList(xbmc.PLAYLIST_VIDEO)
-        playlist.clear()
-        print videos
-        for link in videos:
-            print repr(link)
-            li=xbmcgui.ListItem(label = 'Testing...', path = link)
-#                               iconImage = self.main.args.icon,
-#                               thumbnailImage = self.main.args.icon)
-            li.setInfo(type = 'Video', infoLabels = {'Title':'Testing...', 'url':link})
-            playlist = xbmc.PlayList(xbmc.PLAYLIST_VIDEO)
-            playlist.add(url = link, listitem = li)
-        xbmcPlayer = xbmc.Player()
-        xbmcPlayer.play(playlist)
-#       if not xbmcPlayer.isPlayingVideo():
-#           popup = xbmcgui.Dialog()
-#           popup.ok('Invalid video playlist', "Video in playlist were removed due to copyright issue.", "Try other sources.")
-
-
 class Main:
 
     def __init__(self, checkMode = True):
@@ -226,5 +201,3 @@ class Main:
             UI().showLinks()
         elif mode == 'history':
             UI().searchResults()
-        elif mode == 'test':
-            UI().test()
