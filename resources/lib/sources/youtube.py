@@ -27,7 +27,7 @@ class Resolver:
                         match = re.compile('http://www.youtube.com/v/(.+)$').findall(url)
                     video_id = match[0].split('?')
                     if (len(video_id) > 0):
-                        match[0] = pl_id[0]
+                        match[0] = video_id[0]
                     movielink, error = self.resolveURL(match[0])
                     return movielink, error
 

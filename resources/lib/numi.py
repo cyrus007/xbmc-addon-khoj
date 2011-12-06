@@ -99,16 +99,10 @@ class UI:
         if len(search_string) == 0:
             return
         DB.add(search_string.strip())
-        for srchItem in Khoj.getTitles(search_string.strip(), self.main.settings['scraper']):
-            srchItem['mode'] = 'links'
-            self.addItem(srchItem, isFolder = True)
-        #add nav items to the list
-        #self.navItems(Khoj.navItems, self.main.args.mode)
-        #end the list
-        self.endofdirectory()
+        self.searchResults(search_string.strip())
 
-    def searchResults(self):
-        for srchItem in Khoj.getTitles(self.main.args.name, self.main.settings['scraper']):
+    def searchResults(self, srch_str):
+        for srchItem in Khoj.getTitles(srch_str, self.main.settings['scraper']):
             srchItem['mode'] = 'links'
             self.addItem(srchItem, isFolder = True)
         self.endofdirectory()
@@ -200,4 +194,4 @@ class Main:
         elif mode == 'links':
             UI().showLinks()
         elif mode == 'history':
-            UI().searchResults()
+            UI().searchResults(title)

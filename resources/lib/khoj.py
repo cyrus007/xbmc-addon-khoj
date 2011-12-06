@@ -12,14 +12,14 @@ except:
     from pysqlite2 import dbapi2 as sqlite
 
 #MAIN URLS
-URLSEARCH = "http://localhost:8090/search?str=%s"
-URLGETVID = "http://localhost:8090/getvids?url=%s"
-RANGUSEARCH = "http://localhost:8090/rangu/search?str=%s"
-RANGUGETVID = "http://localhost:8090/rangu/getvids?url=%s"
-STTSEARCH = "http://localhost:8090/stt/search?str=%s"
-STTGETVID = "http://localhost:8090/stt/getvids?url=%s"
-BMSEARCH = "http://localhost:8090/bm/search?str=%s"
-BMGETVID = "http://localhost:8090/bm/getvids?url=%s"
+URLSEARCH = "http://khoj.heroku.com/search?str=%s"
+URLGETVID = "http://khoj.heroku.com/getvids?url=%s"
+RANGUSEARCH = "http://khoj.heroku.com/rangu/search?str=%s"
+RANGUGETVID = "http://khoj.heroku.com/rangu/getvids?url=%s"
+STTSEARCH = "http://khoj.heroku.com/stt/search?str=%s"
+STTGETVID = "http://khoj.heroku.com/stt/getvids?url=%s"
+BMSEARCH = "http://khoj.heroku.com/bm/search?str=%s"
+BMGETVID = "http://khoj.heroku.com/bm/getvids?url=%s"
 
 pluginName = sys.modules['__main__'].__plugin__
 

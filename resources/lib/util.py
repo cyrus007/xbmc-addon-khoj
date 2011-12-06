@@ -53,7 +53,7 @@ def getScraper(url):
     if url == '':
         return
     server = re.compile('http://.+?/').findall(url)
-    print '[getScraper] ' + server[0]
+    #print '[getScraper] ' + server[0]
     if 'youtube' in server[0]:
         import sources.youtube as scraper
     elif 'dailymotion' in server[0]:
