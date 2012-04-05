@@ -62,6 +62,11 @@ class Khoj:
             print e.msg
             print e.headers
             print e.fp.read()
+        except urllib2.URLError, e:
+            print e.code
+            print e.msg
+            print e.headers
+            print e.fp.read()
 
     def getServers(self, svrurl, scraper):
         """self.servers=[Server,...]"""
@@ -85,6 +90,11 @@ class Khoj:
             for source in json_data['servers']:
                 yield self.Server(seq=source['no'], urls=source['links'])
         except urllib2.HTTPError, e:
+            print e.code
+            print e.msg
+            print e.headers
+            print e.fp.read()
+        except urllib2.ValueError, e:
             print e.code
             print e.msg
             print e.headers
